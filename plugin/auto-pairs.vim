@@ -405,7 +405,7 @@ endfunction
 
 function! AutoPairsInit()
   let b:autopairs_loaded  = 1
-  let b:autopairs_enabled = 1
+  let b:autopairs_enabled = !exists('g:AutoPairsEnableDefault') || g:AutoPairsEnableDefault ? 1 : 0
   let b:AutoPairsClosedPairs = {}
 
   if !exists('b:AutoPairs')
